@@ -6,6 +6,7 @@ Using the Connectivity Map database, differential gene lists were compared with 
 This repository provides an optimized and modularized R pipeline for identifying potential therapeutic compounds or small molecules from a list of differentially expressed genes using the Connectivity Map (CMap) analysis framework.
 
 ## Project Structure
+```
 ├── cmap_functions.R             # Core function definitions
 ├── compute_scores.R             # Main analysis script
 ├── data/
@@ -13,7 +14,8 @@ This repository provides an optimized and modularized R pipeline for identifying
     ├── MSigDB_enrich.RData      # Precalculate msgibdb enrichment to compute specificity score
     ├── GPL96.RData              # For gene to probe ID conversion
 ├── results/                     # Output directory
-└── README.md             
+└── README.md
+```            
 
 ## Score
 - Connectivity score: with a value between +1 and −1 described the similarity between the target transcriptomic profile (DEG) and an individual compound’s transcriptomic profile, where +1 was most similar and −1 was least similar to the input dataset.
