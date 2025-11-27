@@ -27,15 +27,19 @@ More details, please see [PavlidisLab/regenerationCMap](https://github.com/Pavli
 Your input file containing the differentially expressed genes must be a CSV file with the following columns:
 
 Column Name	Description
+```
 gene_name	Official gene symbol (e.g., TP53, STAT1)
 log2FoldChange	Log2 fold change of differential expression
 pvalue	Statistical p-value from the significance test
 padj	Adjusted p-value (e.g., FDR) for multiple test correction
+```
 
 Example (DEG.RDS):
+```
 gene_name,log2FoldChange,pvalue,padj
 STAT1,3.2,0.00001,0.0005
 CDKN1A,2.5,0.00002,0.0006
+```
 
 ## Usage
 1. Run Analysis: Execute the compute_scores.R script in R.
@@ -54,12 +58,13 @@ CDKN1A,2.5,0.00002,0.0006
 
 ## Dependencies
 Please ensure the following R packages are installed before running the scripts:
-
+```
 dplyr
 
 ggplot2
 
 readr
+```
 
 You can install them using:
 
