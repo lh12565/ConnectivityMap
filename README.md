@@ -1,4 +1,4 @@
-# ConnectivityMap(https://www.science.org/doi/10.1126/science.1132939)
+# [ConnectivityMap](https://www.science.org/doi/10.1126/science.1132939)
 Calculate Connectivity Map scores to identify potential drugs. 
 
 Using the Connectivity Map database, differential gene lists were compared with the transcriptomic effects of over 1,300 known drugs to identify small molecule drugs capable of inducing a similar transcriptional state.
