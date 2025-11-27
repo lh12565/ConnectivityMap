@@ -44,26 +44,28 @@ CDKN1A,2.5,0.00002,0.0006
 ## Usage
 1. Run Analysis: Execute the compute_scores.R script in R.
 2. Output
-   - Ranked List of Potential Compounds (ranked_compounds.csv):
+  - Ranked List of Potential Compounds (ranks.RData):
 
-  A CSV file listing all candidate small molecules/compounds, ranked by their association (Connectivity Score) with your input gene signature.
+      A CSV file listing all candidate small molecules/compounds, ranked by their association (Connectivity Score) with your input gene signature.
   
-  Includes all calculated scores (Connectivity, Specificity, Reliability) for easy filtering and prioritization.
+      Includes all calculated scores (Connectivity, Specificity, Reliability) for easy filtering and prioritization.
   
-  - Visualization Plot (top_compounds_plot.png):
+  - Visualization Plot (dotplot_cmap.pdf):
   
-  A bar chart visualizing the top candidate compounds and their Connectivity Scores.
+      A bar chart visualizing the top candidate compounds and their Connectivity Scores.
   
-  Typically, strong positive scores suggest the compound may induce a biological state similar to your signature, while strong negative scores suggest it may reverse the state.
+      Typically, strong positive scores suggest the compound may induce a biological state similar to your signature, while strong negative scores suggest it may reverse the state.
 
 ## Dependencies
 Please ensure the following R packages are installed before running the scripts:
 ```
+ConnectivityMap
+memoise
+ggrepel
 dplyr
-
+magrittr
+gglue
 ggplot2
-
-readr
 ```
 
 You can install them using:
