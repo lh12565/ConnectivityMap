@@ -3,7 +3,7 @@ Calculate Connectivity Map scores to identify potential drugs ([Science paper](h
 
 Using the Connectivity Map database, differential gene lists were compared with the transcriptomic effects of over 1,300 known drugs to identify small molecule drugs capable of inducing a similar transcriptional state.
 
-This repository provides an optimized and modularized R pipeline for identifying potential therapeutic compounds or small molecules from a list of differentially expressed genes using the Connectivity Map (CMap) analysis framework.
+This repository provides an optimized and modularized R pipeline for identifying potential drugs from a list of differentially expressed genes using the Connectivity Map (CMap) analysis framework.
 
 ## Dependencies
 Please ensure the following R packages are installed before running the scripts:
