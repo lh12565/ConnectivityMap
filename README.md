@@ -69,6 +69,7 @@ for (pkg in packages) {
 - **Connectivity score**: with a value between +1 and −1 described the similarity between the target transcriptomic profile (DEG) and an individual compound’s transcriptomic profile, where +1 was most similar and −1 was least similar to the input dataset.
 - **Specificity_score**: Specificity is computed as the proportion of MSigDB gene lists that give a higher connectivity score than the query gene list, which we subtracted from 1.0 so that high scores correspond to higher specificity.
 - **Reliability score**: The reliability measure is "true" (coded as 1) if the perturbagen is represented by more than one profile in CMap and if the majority of experiments show enrichment in the same direction for the query gene list, and is "false" otherwise (coded as 0).
+
 More details, please see [PavlidisLab/regenerationCMap](https://github.com/PavlidisLab/regenerationCMap) and [Nature paper](https://www.nature.com/articles/s41586-025-09647-y).
 
 ## Input File Format
@@ -76,10 +77,10 @@ Your input file containing the differentially expressed genes must be a data.fra
 
 Column Name  Description
 ```
-gene_name  Official gene symbol (e.g., TP53, STAT1)
-log2FoldChange  Log2 fold change of differential expression
-pvalue  Statistical p-value from the significance test
-padj  Adjusted p-value (e.g., FDR) for multiple test correction
+gene_name      Official gene symbol (e.g., TP53, STAT1)
+log2FoldChange      Log2 fold change of differential expression
+pvalue      Statistical p-value from the significance test
+padj      Adjusted p-value (e.g., FDR) for multiple test correction
 ```
 
 Example (DEG.RDS):
@@ -95,6 +96,7 @@ ADRB2        13.122826  0.8066832     -4.0239324 9.05e-07 0.00226        ADRB2
 
 ## Usage
 1. Run Analysis:
+
 Execute the compute_scores.R script in R.
 
 Filtering and sorting, can be appropriately modified according to your own data
