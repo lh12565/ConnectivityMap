@@ -77,10 +77,10 @@ Your input file containing the differentially expressed genes must be a data.fra
 
 Column Name  Description
 ```
-gene_name      Official gene symbol (e.g., TP53, STAT1)
-log2FoldChange      Log2 fold change of differential expression
-pvalue      Statistical p-value from the significance test
-padj      Adjusted p-value (e.g., FDR) for multiple test correction
+gene_name            Official gene symbol (e.g., TP53, STAT1)
+log2FoldChange       Log2 fold change of differential expression
+pvalue               Statistical p-value from the significance test
+padj                 Adjusted p-value (e.g., FDR) for multiple test correction
 ```
 
 Example (DEG.RDS):
@@ -97,9 +97,9 @@ ADRB2        13.122826  0.8066832     -4.0239324 9.05e-07 0.00226        ADRB2
 ## Usage
 1. Run Analysis:
 
-Execute the compute_scores.R script in R.
+      Execute the compute_scores.R script in R.
 
-Filtering and sorting, can be appropriately modified according to your own data
+      Filtering and sorting, can be appropriately modified according to your own data
 3. Output
   - Score file (out_cmap.RData)
 
