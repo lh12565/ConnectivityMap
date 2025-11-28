@@ -75,10 +75,10 @@ connectivityMapEnrichment = function(upTags,downTags,rankMatrix,instances,pAdjus
         
         relevantUpCount = (relevantInstances$score>0) %>% sum
         relevantDownCount = (relevantInstances$score<0) %>% sum
-        relevantMehCount = (relevantInstances$score==0) %>% sum  #0表示up和downd的score方向都一样，见score的函数
+        relevantMehCount = (relevantInstances$score==0) %>% sum
         nonNull = (relevantUpCount>=relevantDownCount)*relevantUpCount + 
             (relevantUpCount<relevantDownCount)*(relevantDownCount)
-        nonNull = nonNull/nrow(relevantInstances)  #在同一种药物中，相同方向比例
+        nonNull = nonNull/nrow(relevantInstances)  #Proportion of consistent directions within the same drug
         
         V = match(chemInstances,scores$instance) %>% sort
         ks0 = ksCalc(V,nrow(instances))
@@ -99,16 +99,16 @@ connectivityMapEnrichment = function(upTags,downTags,rankMatrix,instances,pAdjus
     confidence$FDR =  p.adjust(confidence$p,method = pAdjustMethod)
     confidence = confidence[c('enrichment','p','FDR','nonNull','instanceCount')]
     
-    return(list(instanceScores = as.data.frame(scores), chemScores = confidence))  #instanceScores有conectivity score   chemScores可以用来计算specificity和reliable，见2.ScoreCalc.R
+    return(list(instanceScores = as.data.frame(scores), chemScores = confidence))
 }
 
 
 score_function<-function(degs,log2FoldChange=0,deg_significance='pvalue',score_significance='p'){
 	if (!deg_significance %in% c("pvalue", "padj")) {
-		stop("type must be 'pvalue' or 'padj'")
+		stop("deg_significance must be 'pvalue' or 'padj'")
 	}
 	if (!score_significance %in% c("p", "FDR")) {
-		stop("type must be 'p' or 'FDR'")
+		stop("score_significance must be 'p' or 'FDR'")
 	}
 
 	degs_f<-degs[ degs$log2FoldChange>log2FoldChange&degs[[deg_significance]]<0.05,]
